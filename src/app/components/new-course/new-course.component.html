@@ -1,0 +1,30 @@
+
+<form >
+    <div class="form-group">
+        <label for="name">Course Name</label>
+        <input 
+        
+            required 
+            minlength="3"
+            type="text" 
+            id="name" 
+            class="form-control"
+        >
+    </div>
+
+    <div class="from-group">
+        <label for="categories">Category</label>
+        <select name="" id="categories" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let item of categories" [value]="item.id">{{item.name}}</option>
+        </select>
+    </div>
+    <div class="checkbox">
+        <label for="monyBack">
+            <input type="checkbox" id="monyBack">
+            30-day mony-back guarantee .
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add</button>
+</form>

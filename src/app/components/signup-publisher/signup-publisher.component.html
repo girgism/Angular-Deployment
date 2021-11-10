@@ -1,0 +1,146 @@
+<p>Login Form</p>
+<br>
+<div class="container-fluid text-center publisher-form">
+    <!-- <h3 class="text-center"><a href="#">Login </a>  | <a href="#"> SignUp</a></h3> -->
+    <form [formGroup]="formSignup" *ngIf="formSignup" class="">
+        <div class="form-group row">
+          <label for="inputUserName" class="col-sm-4 col-form-label">User Name</label>
+          <div class="col-sm-8">
+            <input type="email" 
+                    class="form-control" 
+                    id="inputUserName"
+                    formControlName="UserName"
+                    [class.is-invalid]="formSignup.controls['UserName'].errors"
+                    [class.is-valid]="!formSignup.controls['UserName'].errors">
+                <div class="alert alert-danger m-2" *ngIf="formSignup.controls['UserName'].errors && formSignup.controls['UserName'].touched">
+                    <p class="text-muted" *ngIf="formSignup.controls['UserName'].errors?.required">This field is Required</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['UserName'].errors?.minlength" >MinLength is 5 characters</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['UserName'].errors?.maxlength" >MaxLength is 20 characters</p>
+                </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input type="email" 
+                    class="form-control" 
+                    id="inputEmail"
+                    formControlName="Email"
+                    [class.is-invalid]="formSignup.controls['Email'].errors"
+                    [class.is-valid]="!formSignup.controls['Email'].errors">
+                <div class="alert alert-danger m-2 h-50" *ngIf="formSignup.controls['Email'].errors && formSignup.controls['Email'].touched">
+                    <p class="text-muted" *ngIf="formSignup.controls['Email'].errors?.required">This field is Required</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['Email'].errors?.email" >Email must contain @ </p>
+                </div>
+          </div>
+        </div>
+        <br>
+    
+        <div class="form-group row">
+          <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+          <div class="col-sm-8">
+            <input type="password"  
+                    class="form-control" 
+                    id="inputPassword"
+                   
+                    formControlName="Password"
+                    [class.is-invalid]="formSignup.controls['Password'].errors"
+                    [class.is-valid]="!formSignup.controls['Password'].errors">
+                <div class="alert alert-danger m-2" *ngIf="formSignup.controls['Password'].touched && formSignup.controls['Password'].errors">
+                    <p class="text-muted" *ngIf="formSignup.controls['Password'].errors?.required">This field is Required</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['Password'].errors?.minlength" >MinLength is 5 characters</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['Password'].errors?.maxlength" >MaxLength is 20 characters</p>
+                </div>
+          </div>
+        </div>
+        <br>
+    
+        <div class="form-group row">
+          <label for="inputConfPassword" class="col-sm-4 col-form-label">Confirm Password</label>
+          <div class="col-sm-8">
+            <input type="password" 
+                    class="form-control" 
+                    id="inputConfPassword"
+                   
+                    formControlName="ConfirmPassword"
+                    [class.is-invalid]="formSignup.controls['ConfirmPassword'].errors"
+                    [class.is-valid]="!formSignup.controls['ConfirmPassword'].errors">
+                <div class="alert alert-danger m-2" *ngIf="formSignup.controls['ConfirmPassword'].touched && formSignup.controls['ConfirmPassword'].errors">
+                    <p class="text-muted" *ngIf="formSignup.controls['ConfirmPassword'].errors?.required">This field is Required</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['ConfirmPassword'].errors?.minlength" >MinLength is 8 characters</p>
+                </div>
+        </div>
+        </div>
+        <br>
+    
+        <div class="form-group row">
+          <label for="inputPhone" class="col-sm-4 col-form-label">Phone Number</label>
+          <div class="col-sm-8">
+            <input type="text" 
+                    class="form-control" 
+                    id="inputPhone"
+                    formControlName="PhoneNumber"
+                    [class.is-invalid]="formSignup.controls['PhoneNumber'].errors"
+                    [class.is-valid]="!formSignup.controls['PhoneNumber'].errors">
+                <div class="alert alert-danger m-2" *ngIf="formSignup.controls['PhoneNumber'].touched && formSignup.controls['PhoneNumber'].errors">
+                    <p class="text-muted" *ngIf="formSignup.controls['PhoneNumber'].errors?.required">This field is Required</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['PhoneNumber'].errors?.minlength" >MinLength is 11 characters</p>
+                    <p class="text-muted" *ngIf="formSignup.controls['PhoneNumber'].value != formSignup.controls['PhoneNumber'].value" >MaxLength is 11 characters </p>
+                </div>
+          </div>
+        </div>
+        <br>
+    
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Role</label>
+            <div class="col-sm-8">
+                <select class="form-control" >
+                    <option class="publisher-role">......</option>
+                    <option class="publisher-role">Photographer</option>
+                    <option class="publisher-role">Makeup Artist</option>
+                    <option>Widding Plenner</option>
+                    <option>Customer</option>
+                </select> 
+            </div>
+        </div>
+        <br>
+    
+        <div class="form-group row">
+            <label for="inputAddress" class="col-sm-4 col-form-label">Address</label>
+            <div class="col-sm-8">
+              <input type="text" 
+                        class="form-control"    
+                        id="inputAddress" 
+                        formControlName="Address"
+                        [class.is-invalid]="formSignup.controls['Address'].errors"
+                        [class.is-valid]="!formSignup.controls['Address'].errors">
+                    <div class="alert alert-danger m-2" *ngIf="formSignup.controls['Address'].touched && formSignup.controls['Address'].errors">
+                        <p class="text-muted" *ngIf="formSignup.controls['Address'].errors?.required">This field is Required</p>
+                        <p class="text-muted" *ngIf="formSignup.controls['Address'].errors?.minlength" >MinLength is 11 characters</p>
+                    </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputFacebook" class="col-sm-4 col-form-label">facebook</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputFacebook"  placeholder="Optional">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputInstegram" class="col-sm-4 col-form-label">Instegram</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputInstegram"  placeholder="Optional">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <div class="text-center">
+            <button type="submit" disabled="formSignup.invalid" [class.disabled]="formSignup.invalid" class="signupbtn">SignUp</button>
+          </div>
+        </div>
+      </form>
+</div>
+

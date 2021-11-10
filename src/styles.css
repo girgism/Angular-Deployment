@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+.form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.footer-bg {
+   
+    background-image: url("./assets/images/footer-main-bg-1.png");
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    margin: .1px;
+    
+}
+.footer-R-img {
+    margin-top: 25%;
+    width: 12em;
+    height: 12em;
+}
+
+.footor-R-name {
+    text-align: center;
+    color: rgb(177 138 50);
+    padding: .9em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.item-r-img {
+    width: 7em;
+    height: 7em;
+    display: inline;
+    border-radius: 1em;
+}
+
+.footer-h {
+    margin-top: 3em;
+    color: #af4545;
+    padding: .2em;
+    
+}
+
+.footer-i-txt {
+    color: rgb(177 138 50);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.footer-contact-txt {
+    padding: 1em;
+    color: rgb(177 138 50);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.inner-footer {
+    background-color: #060c1c;
+    margin: 0px;
+}
+
+.inner-footer p{
+    color: #b5a8a8;
+    font-size: 1.1em;
+    padding-top: 0.5em;
+    font-family: monospace;
+}
+.f-links{
+    background-color: white;
+    color: black;
+    font-size: 2em;
+    border-radius: 3em;
+    margin: 0.2em;
+    padding: 0.3rem;
+
+}

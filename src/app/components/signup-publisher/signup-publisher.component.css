@@ -1,0 +1,50 @@
+a{
+    text-decoration: none;
+}
+.publisher-form{
+    background-image: url("./../../../assets/images/planB.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color-burn;
+    width: 30rem;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 3px 10px #ad94aa;
+}
+
+.publisher-form label{
+    border-color: rgb(98, 36, 78);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.publisher-form input {
+    border-color: rgb(98, 36, 78);
+}
+
+.publisher-role {
+    color:rgb(98, 36, 78);
+    font-size: 1.1rem;
+    padding: .2rem;
+}
+
+.signupbtn{
+    background-color: rgb(118 35 91);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    font-family: initial;
+    border-style: none;
+    width: 7rem;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+
+.disabled{
+    background-color: rgb(161, 104, 161);
+}

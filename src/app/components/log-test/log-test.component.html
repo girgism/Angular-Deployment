@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <div class="form-group">
+            <div class="alert alert-success">
+                The Number Of Employees is: {{employees.length}} <br>
+                Employee Names 
+                <ul>
+                    <li *ngFor="let item of employees">
+                        {{item}}
+                    </li>
+                </ul>
+            </div><br><br>
+
+            <label for="employeeName">Employee Name </label>
+            <input 
+                (keyup.enter)="increaseEmployeesNumber(inputTitle.value);inputTitle.value=''" 
+                required 
+                type="text" 
+                class="form-control" 
+                id="employeeName" 
+                #inputTitle>
+            <br>
+            <button 
+                (click)="increaseEmployeesNumber(inputTitle.value);inputTitle.value=''" 
+                class="btn btn-success">
+                Add Employee
+            </button>
+        </div>
+    </div>
+</div>

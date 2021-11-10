@@ -1,0 +1,100 @@
+<br>
+<div class="container text-center">
+  <div class="">
+    <div class="col">
+      <input type="text" class="form-control-lg text-center inputSearch" id="recipeSearch" placeholder="What's You Need" name="" [(ngModel)]="filter">
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+<div class="container"> 
+  <div *ngFor="let item of allRecipes |filter:filter | paginate: { itemsPerPage: count, currentPage: p }">  
+    <div class="card col-lg-4 col-md-4">
+      <img class="card-img-top" src="./../../../assets/images/gallery3-1-380x340.jpg" alt="Card image cap" class="i-rec">
+      <div class="card-body">
+        <h5 class="card-title">{{item.recipeName}}</h5>
+        <p class="card-text">{{item.recipeCon}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<!--Including the pagination control.-->
+<div class="text-right">
+  <pagination-controls class="pgStyle" (pageChange)="p = $event"></pagination-controls>
+</div>
+
+
+<br>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<!-- Recipe Page Logo -->
+<div class="row">
+    <span class="text-center col-md-12 colo-lg-12 col-sm-12">
+        <img class="img-recipe-logo" src="./../../../assets/images/Component 1.png" alt="Recipe Home Logo">
+    </span>
+</div><br>
+<!-- Recipe Page Logo -->
+
+<!-- Recipe Filter Field  -->
+<br>
+<div class="container text-center">
+  <div class="">
+    <div class="col">
+      <input type="text" class="form-control-lg text-center inputSearch" id="recipeSearch" placeholder="What's You Want" name="" [(ngModel)]="filter">
+    </div>
+  </div>
+</div>
+<br>
+<!-- End Recipe Filter Field  -->
+
+<!-- Recipes Section -->
+<table class="container">  
+    <tbody>  
+      <tr class="row" *ngFor="let item of names |filter:filter | paginate: { itemsPerPage: count, currentPage: p }">  
+        <td class="col-lg-4 col-md-4">
+          <div class="alert alert-success text-center">
+            {{item}} 
+          </div>
+        </td>
+        <td class="col-lg-4 col-md-4">
+          <div class="alert alert-success text-center">
+            {{item}} 
+          </div>
+        </td>  
+        <td class="col-lg-4 col-md-4">
+          <div class="alert alert-success text-center">
+            {{item}} 
+          </div>
+        </td>    
+      </tr>  
+    </tbody>    
+  </table> 
+<!-- Recipes Section -->
+
+
+<!--Including the pagination control.-->
+<div class="text-right">
+    <pagination-controls class="pgStyle" (pageChange)="p = $event"></pagination-controls>
+</div>
+<br>
+<!--End Including the pagination control.-->
+
+
+
